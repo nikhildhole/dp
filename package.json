@@ -1,0 +1,11 @@
+{
+  "name": "dp",
+  "version": "1.0.0",
+  "description": "Dynamic programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
