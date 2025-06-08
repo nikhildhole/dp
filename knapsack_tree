@@ -1,0 +1,43 @@
+// Knapsack Recursive Call Tree
+digraph {
+	"2_7" [label="knapsack(3,7)"]
+	"1_6" [label="knapsack(2,6)"]
+	"2_7" -> "1_6" [label=Include]
+	"0_5" [label="knapsack(1,5)"]
+	"1_6" -> "0_5" [label=Include]
+	"-1_4" [label="knapsack(0,4)"]
+	"0_5" -> "-1_4" [label=Include]
+	"leaf_-1_4" [label="Return 0" color=lightgrey shape=box style=filled]
+	"-1_4" -> "leaf_-1_4"
+	"-1_5" [label="knapsack(0,5)"]
+	"0_5" -> "-1_5" [label=Exclude]
+	"leaf_-1_5" [label="Return 0" color=lightgrey shape=box style=filled]
+	"-1_5" -> "leaf_-1_5"
+	"0_6" [label="knapsack(1,6)"]
+	"1_6" -> "0_6" [label=Exclude]
+	"0_6" -> "-1_5" [label=Include]
+	"leaf_-1_5" [label="Return 0" color=lightgrey shape=box style=filled]
+	"-1_5" -> "leaf_-1_5"
+	"-1_6" [label="knapsack(0,6)"]
+	"0_6" -> "-1_6" [label=Exclude]
+	"leaf_-1_6" [label="Return 0" color=lightgrey shape=box style=filled]
+	"-1_6" -> "leaf_-1_6"
+	"1_7" [label="knapsack(2,7)"]
+	"2_7" -> "1_7" [label=Exclude]
+	"1_7" -> "0_6" [label=Include]
+	"0_6" -> "-1_5" [label=Include]
+	"leaf_-1_5" [label="Return 0" color=lightgrey shape=box style=filled]
+	"-1_5" -> "leaf_-1_5"
+	"0_6" -> "-1_6" [label=Exclude]
+	"leaf_-1_6" [label="Return 0" color=lightgrey shape=box style=filled]
+	"-1_6" -> "leaf_-1_6"
+	"0_7" [label="knapsack(1,7)"]
+	"1_7" -> "0_7" [label=Exclude]
+	"0_7" -> "-1_6" [label=Include]
+	"leaf_-1_6" [label="Return 0" color=lightgrey shape=box style=filled]
+	"-1_6" -> "leaf_-1_6"
+	"-1_7" [label="knapsack(0,7)"]
+	"0_7" -> "-1_7" [label=Exclude]
+	"leaf_-1_7" [label="Return 0" color=lightgrey shape=box style=filled]
+	"-1_7" -> "leaf_-1_7"
+}
