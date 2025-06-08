@@ -1,0 +1,8 @@
+| Method                | Time Complexity | Space    | Notes                    |
+| --------------------- | --------------- | -------- | ------------------------ |
+| Recursion             | O(2ⁿ)           | O(n)     | Brute force              |
+| Recursion + Memo      | O(n)            | O(n)     | Top-down DP              |
+| Iterative DP          | O(n)            | O(n)     | Bottom-up tabulation     |
+| Optimized Iteration   | O(n)            | O(1)     | Best for space saving    |
+| Matrix Exponentiation | O(log n)        | O(log n) | Fastest exact method     |
+| Binet’s Formula       | O(1)            | O(1)     | May have rounding issues |
